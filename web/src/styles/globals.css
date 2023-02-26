@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  #__next,
+  #site {
+    @apply w-full min-h-screen flex flex-col items-center;
+  }
+
+  /* Layout Basico */
+  .container {
+    @apply w-full max-w-screen-xl mx-auto;
+  }
+
+  #site-header {
+    background: theme("colors.neutral.900");
+    @apply w-full h-20;
+  }
+
+  #site-footer {
+    background: theme("colors.neutral.400");
+    min-height: theme("spacing.16");
+    @apply w-full mt-auto;
+  }
+
+  #site-main {
+    @apply w-full max-w-screen-xl py-2;
+  }
+
+  /* Site Header & Footer */
+  #site-header .container,
+  #site-footer .container {
+    @apply min-h-full flex justify-between items-center;
+  }
+
+  #site-footer .container {
+    @apply justify-center;
+  }
+
+  #site-title {
+    @apply text-white text-2xl font-medium;
+  }
+
+  #site-copyright {
+    @apply w-full h-16 flex justify-center items-center;
+  }
+}
