@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Forms & Elements */
+  input,
+  textarea {
+    @apply outline-none px-4 py-3;
+  }
+
+  button {
+    @apply px-4 py-3;
+  }
+}
+
 @layer components {
   #__next,
   #site {
@@ -14,14 +26,12 @@
   }
 
   #site-header {
-    background: theme("colors.neutral.900");
-    @apply w-full h-20;
+    @apply w-full h-20 bg-neutral-900;
   }
 
   #site-footer {
-    background: theme("colors.neutral.400");
     min-height: theme("spacing.16");
-    @apply w-full mt-auto;
+    @apply w-full mt-auto bg-neutral-100;
   }
 
   #site-main {
@@ -43,6 +53,19 @@
   }
 
   #site-copyright {
-    @apply w-full h-16 flex justify-center items-center;
+    @apply w-full h-16 flex justify-center items-center text-neutral-900 drop-shadow shadow-neutral-900;
+  }
+
+  /* Form Login */
+  .form-login {
+    @apply flex flex-col gap-2 my-4 w-full lg:max-w-xs;
+  }
+
+  .form-login input {
+    @apply text-center rounded-2xl shadow-sm shadow-neutral-900;
+  }
+
+  .form-login button {
+    @apply bg-neutral-900 text-white rounded-2xl hover:bg-orange-600 transition-colors delay-200 ease-linear shadow-sm;
   }
 }
