@@ -85,7 +85,7 @@
 
   #serie-form .serie-dropzone {
     min-height: theme("spacing.105");
-    @apply w-80 basis-80;
+    @apply w-80 basis-80 flex items-center justify-center;
   }
 
   #serie-form .serie-info {
