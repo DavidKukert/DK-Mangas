@@ -49,11 +49,20 @@
   }
 
   #site-title {
-    @apply text-white text-2xl font-medium;
+    @apply text-white text-2xl font-medium cursor-pointer;
   }
 
   #site-copyright {
     @apply w-full h-16 flex justify-center items-center text-neutral-900 drop-shadow shadow-neutral-900;
+  }
+
+  /* Page Header */
+  .page-header {
+    @apply w-full my-4;
+  }
+
+  .page-header .page-title {
+    @apply text-4xl text-white font-medium drop-shadow cursor-pointer;
   }
 
   /* Form Login */
@@ -67,5 +76,35 @@
 
   .form-login button {
     @apply bg-neutral-900 text-white rounded-2xl hover:bg-orange-600 transition-colors delay-200 ease-linear shadow-sm;
+  }
+
+  /* Form Series */
+  #serie-form {
+    @apply w-full flex gap-4;
+  }
+
+  #serie-form .serie-dropzone {
+    min-height: theme("spacing.105");
+    @apply w-80 basis-80;
+  }
+
+  #serie-form .serie-info {
+    width: calc(100% - theme(spacing.80) - theme(spacing.4));
+  }
+
+  #serie-form .serie-info input,
+  #serie-form .serie-info textarea {
+    @apply block w-full mb-2 shadow-sm shadow-neutral-900;
+  }
+
+  #serie-form .serie-info textarea {
+    @apply min-h-[10rem];
+  }
+
+  #serie-form .serie-info button {
+    text-shadow: 2px 2px 2px theme(colors.neutral.900);
+    transition: background linear 0.3s;
+    @apply bg-neutral-800 shadow-sm shadow-neutral-900 border border-neutral-900 text-white text-center mx-1 my-2 
+    hover:bg-orange-600;
   }
 }
